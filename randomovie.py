@@ -25,9 +25,6 @@ def index():
 @app.route('/Western')
 def randoms():
     movies = tmdb.Genres(id=37)
-#    pages = movies.movies()['total_pages']
-#    data = movies.movies(page=random.randint(1, pages))
-    rawdata = movies.movies()
-    pages = rawdata['total_pages']
-    data = rawdata['page']
+    pages = movies.movies()['total_pages']
+    data = movies.movies(page=random.randint(1, pages))
     return render_template('random.html', data=data)
