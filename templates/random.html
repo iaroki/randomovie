@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="static/css/index.css">
+<title>randomovie</title>
+</head>
+<body>
+<h1>randomovie</h1>
+
+{% for i in data['results'] %}
+    {% for line in range(1) %}
+        {{i['title']}} ({{i['release_date'][:4]}})<br>
+    {% endfor %}
+{% endfor %}
+
+
+{{data}}
+
+</body></html>
+

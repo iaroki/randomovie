@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="static/css/index.css">
+<title>randomovie</title>
+</head>
+<body>
+<h1>randomovie</h1>
+<ul>
+    {% for name in mygenres.keys()%}
+        <li><a href="/{{name}}">{{name}}</a></li>
+    {% endfor %}
+</ul>
+</body></html>
+
